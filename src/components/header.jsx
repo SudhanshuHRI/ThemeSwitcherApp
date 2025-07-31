@@ -47,14 +47,14 @@ const Header = () => {
 
        <li className="nav-item">
   <select
-    className="form-select theme-select"
+    className="form-select theme-select px-5"
     aria-label="Select Theme"
     value={theme}
     onChange={(e) => setTheme(e.target.value)}
   >
-    <option value="theme1">Theme 1 (Minimal)</option>
-    <option value="theme2">Theme 2 (Dark)</option>
-    <option value="theme3">Theme 3 (Colorful)</option>
+    <option value="theme1">Minimal</option>
+    <option value="theme2">Dark</option>
+    <option value="theme3">Colorful</option>
   </select>
 </li>
 
