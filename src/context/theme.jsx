@@ -13,15 +13,23 @@ export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('app-theme') || 'theme1';
   });
+   const [layout, setLayout] = useState(() => {
+    return localStorage.getItem('app-layout') || 'layout1';
+  });
+  
+
+   useEffect(() => {
+    localStorage.setItem('app-layout', layout);
+  }, [layout]);
 
   useEffect(() => {
     localStorage.setItem('app-theme', theme);
-    document.body.className = ''; // clear old classes
-    document.body.classList.add(theme); // apply new theme class to body
+    document.body.className = ''; 
+    document.body.classList.add(theme);
   }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme, layout,setLayout }}>
       {children}
     </ThemeContext.Provider>
   );

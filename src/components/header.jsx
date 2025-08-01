@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
 import { useTheme } from "../context/theme.jsx";
 const Header = () => {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, layout, setLayout } = useTheme();
+
+  useEffect(() => {
+    if (theme == "theme1") {
+      setLayout("layout1");
+    }
+    if (theme == "theme2") {
+      setLayout("layout2");
+    }
+    if (theme == "theme3") {
+      setLayout("layout3");
+    }
+  }, [theme]);
 
   return (
     <header className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          Multi-Theme App
+          ThemeSwitcher App
         </Link>
         <button
           className="navbar-toggler"
@@ -45,19 +57,18 @@ const Header = () => {
               </Link>
             </li>
 
-       <li className="nav-item">
-  <select
-    className="form-select theme-select px-5"
-    aria-label="Select Theme"
-    value={theme}
-    onChange={(e) => setTheme(e.target.value)}
-  >
-    <option value="theme1">Minimal</option>
-    <option value="theme2">Dark</option>
-    <option value="theme3">Colorful</option>
-  </select>
-</li>
-
+            <li className="nav-item">
+              <select
+                className="form-select theme-select px-5"
+                aria-label="Select Theme"
+                value={theme}
+                onChange={(e) => setTheme(e.target.value)}
+              >
+                <option value="theme1">Minimal</option>
+                <option value="theme2">Dark</option>
+                <option value="theme3">Colorful</option>
+              </select>
+            </li>
           </ul>
         </div>
       </div>

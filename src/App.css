@@ -32,3 +32,55 @@ body {
   padding: 5px 10px;
   font-size: 1rem;
 }
+
+
+.backgroundImg{
+  background-image: url("https://media.istockphoto.com/id/1429249550/vector/the-gray-pattern-of-lines.jpg?s=612x612&w=0&k=20&c=xdWhKuT8Ev9Z67zuRT648M-qdhiT3n5tt6z9ZqCoMEA=");
+  background-position:initial;
+  background-repeat: no-repeat;
+  background-size: auto;
+ 
+}
+
+ul{
+  list-style-type: none;
+  padding-left:0;
+}
+
+/* Fade-in animation on load */
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover animation for each list item */
+.list-hover {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.list-hover:hover {
+  background-color: #343a40; /* slightly lighter dark */
+  transform: translateX(8px);
+}
+
+.category-item {
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.category-item:hover {
+  background-color: #f1f1f1;
+  color:black;
+  transform: translateX(5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
