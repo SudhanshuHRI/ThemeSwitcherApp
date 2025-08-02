@@ -38,12 +38,12 @@ const Home = () => {
             <div className="col-sm-12 col-md-10 col-lg-8 mb-4">
               {products.map((item, index) => (
                 <div className="card mt-4 backgroundImg" key={index}>
-                  <div className="card-body d-flex ">
+                  <div className="card-body d-md-flex ">
                     <img
                       src={item.images[0] ? item.images[0] : "noImage.png"}
                       alt={item.title || "Product Image"}
                       width="30%"
-                      className="border rounded shadow-sm bg-light"
+                      className="border rounded shadow-sm bg-light responsive-img"
                     />
 
                     <div className="w-100 ps-3 h5">
@@ -80,8 +80,8 @@ const Home = () => {
         <div className="container-fluid" style={{ paddingTop: "80px" }}>
           <div className="row justify-content-center">
             <div className="col-sm-4 col-md-4 col-lg-4 mb-4 animate-fade-in">
-              <div className="card bg-dark text-light">
-                <div className="card-body">
+              <div className="card bg-dark text-light ">
+                <div className="card-body ">
                   <ul>
                     {categories.map((item, index) => (
                       <li
@@ -101,13 +101,16 @@ const Home = () => {
               <div className="w-100">
                 {showProducts.length > 0 ? (
                   showProducts.map((item, index) => (
-                    <div className="card mt-4 bg-dark" key={index}>
-                      <div className="card-body d-flex ">
+                    <div
+                      className="card mt-4 bg-dark backgroundImg2"
+                      key={index}
+                    >
+                      <div className="card-body d-lg-flex ">
                         <img
                           src={item.images[0] ? item.images[0] : "noImage.png"}
                           alt={item.title || "Product Image"}
                           width="20%"
-                          className="border rounded shadow-sm bg-light"
+                          className="border rounded shadow-sm bg-light responsive-img2"
                         />
 
                         <div className="w-100 ps-3 h5">
@@ -148,17 +151,28 @@ const Home = () => {
             Welcome to the Theme Switcher App
           </h1>
           <div className="row justify-content-center">
-            <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-              <div className="card h-100">
-                <div className="card-body d-flex flex-column">
-                  <h5 className="card-title">Card </h5>
-                  <p className="card-text">This is some content for card .</p>
-                  <a href="#" className="btn btn-primary mt-auto">
-                    Go somewhere
-                  </a>
+            {products.map((item, index) => (
+              <div className="col-sm-12 col-md-6 col-lg-4 mb-4" key={index}>
+                <div className="card h-100">
+                  <div className="card-body d-flex flex-column">
+                    <img
+                      src={item.images[0]}
+                      width="100%"
+                      className="backgroundImg"
+                    />
+                    <p className="h5 text-center">
+                      <strong>{item.title}</strong>{" "}
+                    </p>
+                    <p>
+                      <strong>Description :</strong> {item.description}
+                    </p>
+                    <p>
+                      <strong>Price :</strong> ${item.price}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       )}

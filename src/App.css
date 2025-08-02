@@ -41,6 +41,21 @@ body {
   background-size: auto;
  
 }
+.aboutBackgroundImg{
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/007/100/599/small_2x/abstract-geometric-white-and-gray-on-light-silver-gradient-background-modern-banner-design-illustration-free-vector.jpg");
+  background-position:initial;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+ 
+}
+.backgroundImg2{
+  background-image: url("https://media.gettyimages.com/id/1490263997/video/flowing-lines-loopable-abstract-background-animation-waves-copy-space-dark-black-version.jpg?s=640x640&k=20&c=SHZTHjV1KWplwnNdgZkATbOH4rfn47FoAbERZVXw1Xs=");
+  background-position:left;
+  background-repeat:no-repeat;
+  background-size:cover;
+ 
+}
 
 ul{
   list-style-type: none;
@@ -83,4 +98,32 @@ ul{
   color:black;
   transform: translateX(5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .responsive-img {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-img {
+    width: 25%;
+  }
+}
+
+.responsive-img2 {
+  width: 100%;
+}
+
+
+
+@media (min-width: 992px) {
+  .responsive-img2 {
+    width: 25%;
+  }
 }
