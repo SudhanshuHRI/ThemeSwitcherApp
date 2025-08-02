@@ -1,25 +1,21 @@
-/* Theme 1 - Minimalist */
 .theme1 {
   --bg: #fff;
   --text: #333;
   --font: Arial, sans-serif;
 }
 
-/* Theme 2 - Dark */
 .theme2 {
   --bg: #121212;
   --text: #f9f9f9;
-  --font: 'Georgia', serif;
+  --font: "Georgia", serif;
 }
 
-/* Theme 3 - Colorful */
 .theme3 {
   --bg: #ffe4b5;
   --text: #222;
-  --font: 'Pacifico', cursive;
+  --font: "Pacifico", cursive;
 }
 
-/* Apply theme */
 body {
   background-color: var(--bg);
   color: var(--text);
@@ -27,42 +23,36 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Utility */
 .theme-select {
   padding: 5px 10px;
   font-size: 1rem;
 }
 
-
-.backgroundImg{
+.backgroundImg {
+  /* https://webartdevelopers.com/blog/wp-content/uploads/2020/06/css-particles-background.gif */
   background-image: url("https://media.istockphoto.com/id/1429249550/vector/the-gray-pattern-of-lines.jpg?s=612x612&w=0&k=20&c=xdWhKuT8Ev9Z67zuRT648M-qdhiT3n5tt6z9ZqCoMEA=");
-  background-position:initial;
-  background-repeat: no-repeat;
-  background-size: auto;
- 
-}
-.aboutBackgroundImg{
-  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/007/100/599/small_2x/abstract-geometric-white-and-gray-on-light-silver-gradient-background-modern-banner-design-illustration-free-vector.jpg");
-  background-position:initial;
+  background-position: initial;
   background-repeat: no-repeat;
   background-size: cover;
-  
- 
 }
-.backgroundImg2{
+.aboutBackgroundImg {
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/007/100/599/small_2x/abstract-geometric-white-and-gray-on-light-silver-gradient-background-modern-banner-design-illustration-free-vector.jpg");
+  background-position: initial;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.backgroundImg2 {
   background-image: url("https://media.gettyimages.com/id/1490263997/video/flowing-lines-loopable-abstract-background-animation-waves-copy-space-dark-black-version.jpg?s=640x640&k=20&c=SHZTHjV1KWplwnNdgZkATbOH4rfn47FoAbERZVXw1Xs=");
-  background-position:left;
-  background-repeat:no-repeat;
-  background-size:cover;
- 
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-ul{
+ul {
   list-style-type: none;
-  padding-left:0;
+  padding-left: 0;
 }
 
-/* Fade-in animation on load */
 .animate-fade-in {
   animation: fadeInUp 0.6s ease-in-out;
 }
@@ -78,13 +68,12 @@ ul{
   }
 }
 
-/* Hover animation for each list item */
 .list-hover {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .list-hover:hover {
-  background-color: #343a40; /* slightly lighter dark */
+  background-color: #343a40;
   transform: translateX(8px);
 }
 
@@ -95,7 +84,7 @@ ul{
 
 .category-item:hover {
   background-color: #f1f1f1;
-  color:black;
+  color: black;
   transform: translateX(5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -120,10 +109,88 @@ ul{
   width: 100%;
 }
 
-
-
 @media (min-width: 992px) {
   .responsive-img2 {
     width: 25%;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+.category-item {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.category-item:hover {
+  background-color: #6c757d;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.shadow-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.shadow-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+.zoom-on-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.zoom-on-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }

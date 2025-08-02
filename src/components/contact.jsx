@@ -43,7 +43,7 @@ const Contact = () => {
             </form>
           </div>
 
-          <div className="bg-white p-4 rounded shadow-sm aboutBackgroundImg mb-4 border">
+          <div className="bg-white p-4 rounded shadow-sm aboutBackgroundImg mb-4 border zoom-on-hover pointer">
             <h5 className="fw-bold mb-2">Get in Touch</h5>
             <p>
               <strong>Email:</strong> hello@themeapp.com
@@ -115,7 +115,7 @@ const Contact = () => {
         <>
           <h2 className="text-center mb-4 text-primary">Get in Touch!</h2>
 
-          <div className="bg-warning p-4 rounded shadow mb-4 text-white">
+          <div className="bg-warning p-4 rounded shadow mb-4 text-white zoom-on-hover pointer">
             <p className="mb-2">
               <strong>Email:</strong> hello@themeapp.com
             </p>
@@ -131,7 +131,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="bg-info p-4 rounded shadow text-white mb-3">
+          <div className="bg-info p-4 rounded shadow text-white mb-3 ">
             <form
               onSubmit={(e) => {
                 e.preventDefault();

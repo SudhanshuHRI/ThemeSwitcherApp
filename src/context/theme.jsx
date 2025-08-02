@@ -1,14 +1,14 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-// Create context
+
 const ThemeContext = createContext();
 
-// Custom hook
+
 export function useTheme() {
   return useContext(ThemeContext);
 }
 
-// Provider
+// context provider
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('app-theme') || 'theme1';
