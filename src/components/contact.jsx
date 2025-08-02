@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTheme } from "../context/theme.jsx";
 import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
   const theme = useTheme();
 
+  const [fullName, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
   // const notify = () => toast("Wow so easy!");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+   
+    if (!fullName || !email || !subject || !message) {
+      toast.error("Some fields are empty!",{position:"top-center"});
+    } else {
+      toast.success("Data validated successfully!!",{position:"top-center"});
+    }
+  };
 
   return (
     <div className="container" style={{ paddingTop: "80px" }}>
@@ -15,27 +29,42 @@ const Contact = () => {
           <h2 className="text-center mb-4">Contact Us</h2>
 
           <div className="bg-light p-4 rounded shadow-sm mb-4 aboutBackgroundImg border">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                toast.success("Message sent successfully!");
-              }}
-            >
+            <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label className="form-label">Full Name</label>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  value={fullName}
+                  onChange={(e) => setFullname(e.target.value)}
+                />
               </div>
               <div className="mb-3">
                 <label className="form-label">Email Address</label>
-                <input type="email" className="form-control" />
+                <input
+                  type="email"
+                  className="form-control"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
               <div className="mb-3">
                 <label className="form-label">Subject</label>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                />
               </div>
               <div className="mb-3">
                 <label className="form-label">Message</label>
-                <textarea className="form-control" rows="4" />
+                <textarea
+                  className="form-control"
+                  rows="4"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
               </div>
               <button type="submit" className="btn btn-success w-100">
                 Send Message
@@ -81,27 +110,42 @@ const Contact = () => {
             </p>
           </div>
           <div className="col-md-6 bg-light text-dark p-4 rounded-end shadow-sm">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                toast.success("Message sent successfully!");
-              }}
-            >
+            <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label className="form-label">Full Name</label>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  value={fullName}
+                  onChange={(e) => setFullname(e.target.value)}
+                />
               </div>
               <div className="mb-3">
                 <label className="form-label">Email Address</label>
-                <input type="email" className="form-control" />
+                <input
+                  type="email"
+                  className="form-control"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
               <div className="mb-3">
                 <label className="form-label">Subject</label>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                />
               </div>
               <div className="mb-3">
                 <label className="form-label">Message</label>
-                <textarea className="form-control" rows="4" />
+                <textarea
+                  className="form-control"
+                  rows="4"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
               </div>
               <button className="btn btn-dark w-100" type="submit">
                 Send Message
@@ -132,27 +176,42 @@ const Contact = () => {
           </div>
 
           <div className="bg-info p-4 rounded shadow text-white mb-3 ">
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                toast.success("Message sent successfully!");
-              }}
-            >
+            <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label className="form-label">Full Name</label>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  value={fullName}
+                  onChange={(e) => setFullname(e.target.value)}
+                />
               </div>
               <div className="mb-3">
                 <label className="form-label">Email Address</label>
-                <input type="email" className="form-control" />
+                <input
+                  type="email"
+                  className="form-control"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
               <div className="mb-3">
                 <label className="form-label">Subject</label>
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                />
               </div>
               <div className="mb-3">
                 <label className="form-label">Message</label>
-                <textarea className="form-control" rows="4" />
+                <textarea
+                  className="form-control"
+                  rows="4"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
               </div>
               <button
                 type="submit"
