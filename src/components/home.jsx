@@ -29,6 +29,23 @@ const Home = () => {
     setShowProducts(filteredProducts);
   };
 
+  // adding dynamic title of page
+  useEffect(() => {
+  switch (theme.theme) {
+    case "theme1":
+      document.title = "Minimalist-Theme";
+      break;
+    case "theme2":
+      document.title = "Dark-Theme";
+      break;
+    case "theme3":
+      document.title = "Playful-Theme";
+      break;
+    default:
+      document.title = "ThemeSwitcher App";
+  }
+}, [theme.theme]);
+
   return (
     <div>
    
