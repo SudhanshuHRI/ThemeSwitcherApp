@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# ThemeSwitcherApp_SudhanshuSrivastava
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based developer tool that simplifies the implementation of dynamic theming and layout customization in web applications. It emphasizes a modular architecture, performance monitoring, and user-centric UI components to enhance both developer experience and end-user engagement.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📑 Table of Contents
 
-### `npm start`
+- [Overview](#overview)
+- [Why ThemeSwitcherApp?](#why-themeswitcherapp)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Testing](#testing)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📘 Overview
 
-### `npm test`
+**ThemeSwitcherApp_SudhanshuSrivastava** is a React-based developer utility that helps build flexible, theme-driven applications with consistent UI and performance optimization.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 💡 Why ThemeSwitcherApp?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project streamlines the process of building flexible, visually consistent React applications. Core features include:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 🎨 **Dynamic Theming**  
+  Easily switch and customize themes across the app, ensuring a cohesive user experience.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🚀 **Performance Monitoring**  
+  Collects and reports web vitals to optimize responsiveness and user satisfaction.
 
-### `npm run eject`
+- 🧩 **Modular Components**  
+  Reusable UI elements like product showcases, headers, and contact forms support scalable development.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- 🔧 **Developer-Friendly Setup**  
+  Clear scripts and configuration facilitate quick project initialization and maintenance.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 🌐 **Centralized Theme Management**  
+  Context-driven theme control with persistence across sessions for a personalized experience.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🚀 Getting Started
 
-## Learn More
+Follow these steps to set up and run the project locally.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ✅ Prerequisites
 
-### Code Splitting
+Make sure you have the following installed:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Programming Language**: JavaScript
+- **Package Manager**: npm
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ⚙️ Installation
 
-### Making a Progressive Web App
+Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/SudhanshuHRI/ThemeSwitcherApp_SudhanshuSrivastava

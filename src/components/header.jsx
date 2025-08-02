@@ -6,6 +6,7 @@ import { useTheme } from "../context/theme.jsx";
 const Header = () => {
   const { theme, setTheme, layout, setLayout } = useTheme();
 
+  // choosing layout according to theme
   useEffect(() => {
     if (theme == "theme1") {
       setLayout("layout1");

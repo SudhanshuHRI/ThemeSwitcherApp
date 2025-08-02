@@ -3,12 +3,15 @@ import { useTheme } from "../context/theme.jsx";
 
 
 const Home = () => {
+  // States Declared
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [showProducts, setShowProducts] = useState([]);
 
+  // imported Context theme value
   const theme = useTheme();
 
+  // function to fetch data from API
   const fetchData = async () => {
     const response = await fetch("https://dummyjson.com/products");
     const data = await response.json();
@@ -20,6 +23,7 @@ const Home = () => {
     fetchData();
   }, []);
 
+  // filtering items to show dark theme's selected list 
   const viewCategory = (cat) => {
     const filteredProducts = products.filter((item) => item.category === cat);
     setShowProducts(filteredProducts);

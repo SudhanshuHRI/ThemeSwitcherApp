@@ -17,11 +17,12 @@ export function ThemeProvider({ children }) {
     return localStorage.getItem('app-layout') || 'layout1';
   });
   
-
+// saving layout in localStorage
    useEffect(() => {
     localStorage.setItem('app-layout', layout);
   }, [layout]);
 
+  // saving theme in localStorage
   useEffect(() => {
     localStorage.setItem('app-theme', theme);
     document.body.className = ''; 

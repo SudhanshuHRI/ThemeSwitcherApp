@@ -16,7 +16,8 @@ import { ThemeProvider } from "./context/theme.jsx";
 function App() {
   return (
     <>
-      <ThemeProvider>
+    {/* here context is covered over all application */}
+      <ThemeProvider> 
         <Header />
 
         <Routes>

@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 const Contact = () => {
   const theme = useTheme();
 
-  const notify = () => toast("Wow so easy!");
+  // const notify = () => toast("Wow so easy!");
 
   return (
     <div className="container" style={{ paddingTop: "80px" }}>
