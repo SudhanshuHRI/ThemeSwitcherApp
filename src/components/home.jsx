@@ -95,6 +95,7 @@ const Home = () => {
             <div className="col-sm-4 col-md-4 col-lg-4 mb-4 animate-fade-in">
               <div className="card bg-dark text-light">
                 <div className="card-body">
+                  <h4 className="text-center">CATEGORIES</h4>
                   <ul>
                     {categories.map((item, index) => (
                       <li
@@ -114,8 +115,8 @@ const Home = () => {
               <div className="w-100">
                 {showProducts.length > 0 ? (
                   showProducts.map((item, index) => (
-                    <div className="card mt-4 bg-dark backgroundImg2 shadow-card animate-fade-in  pointer" key={index}>
-                      <div className="card-body d-lg-flex">
+                    <div className="card  bg-dark backgroundImg2 shadow-card animate-fade-in  pointer mb-3 " key={index} >
+                      <div className="card-body d-lg-flex ">
                         <img
                           src={item.images[0] || "noImage.png"}
                           alt={item.title || "Product Image"}
@@ -140,7 +141,7 @@ const Home = () => {
                     </div>
                   ))
                 ) : (
-                  <div className="card mt-4 bg-dark animate-fade-in">
+                  <div className="card  bg-dark animate-fade-in">
                     <div className="card-body text-light h4 text-center pt-5">
                       <p>Please Select Category</p>
                     </div>
